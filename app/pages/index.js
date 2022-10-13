@@ -2,6 +2,7 @@ import React from "react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { useWallet } from "@solana/wallet-adapter-react";
 import CandyMachine from "../components/CandyMachine";
+import Pagination from "./pagination";
 
 // Constants
 const TWITTER_HANDLE = "_buildspace";
@@ -28,6 +29,7 @@ const Home = () => {
                     <p className="sub-text">NFT drop machine with fair mint</p>
                     {wallet.publicKey ? <CandyMachine walletAddress={wallet} /> : renderNotConnectedContainer()}
                 </div>                
+                {wallet.publicKey && <Pagination/>}
                 <div className="footer-container">
                     <img alt="Twitter Logo" className="twitter-logo" src="twitter-logo.svg" />
                     <a className="footer-text" href={TWITTER_LINK} target="_blank" rel="noreferrer">{`built on @${TWITTER_HANDLE}`}</a>
