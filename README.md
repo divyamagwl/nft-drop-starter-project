@@ -1,4 +1,8 @@
 # buildspace Solana NFT Drop Project
+NFT Minting portal with Fetch NFTs with pagination options
+![demo](demo/demo.png)
+![demo](demo/demo2.png)
+
 ### Welcome 👋
 To get started with this course, clone this repo and follow these commands:
 
