@@ -25,7 +25,6 @@ const Home = () => {
             <div className="container">
                 <div className="header-container">
                     <p className="header">🍭 Candy Drop</p>
-                    {    console.log(wallet.publicKey)}
                     <p className="sub-text">NFT drop machine with fair mint</p>
                     {wallet.publicKey ? <CandyMachine walletAddress={wallet} /> : renderNotConnectedContainer()}
                 </div>                

@@ -91,8 +91,6 @@ const Pagination = () => {
             currentView.map((nft, index) => (
               <div key={index} className="nftPreview">
                 <h1>{nft.name}</h1>
-                {console.log(nft)}
-
                 <img
                   className="nftImage"
                   src={nft.image || '/fallbackImage.jpg'}
