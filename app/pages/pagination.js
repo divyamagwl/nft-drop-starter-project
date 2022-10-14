@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Metaplex } from '@metaplex-foundation/js';
 import { clusterApiUrl, Connection, PublicKey } from '@solana/web3.js';
+import { useWallet } from "@solana/wallet-adapter-react";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 import axios from "axios";
 
@@ -9,8 +10,11 @@ const connection = new Connection(clusterApiUrl(network));
 const mx = Metaplex.make(connection);
 
 const Pagination = () => {
+  const wallet = useWallet();
+
   const [address, setAddress] = useState(
-    "677QHKe3M8vy1nac9JLB9xETxj2gSsooX4jdqjuEx45H",
+    wallet.publicKey.toJSON()
+    // "677QHKe3M8vy1nac9JLB9xETxj2gSsooX4jdqjuEx45H",
   );
 
   const [nftList, setNftList] = useState(null);
